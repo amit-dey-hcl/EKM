@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102.337" height="102.125" viewBox="0 0 102.337 102.125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_149221" data-name="Rectangle 149221" width="85.989" height="85.989" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_184900" data-name="Group 184900" transform="translate(-210 -1411)">
+    <g id="Group_184889" data-name="Group 184889" transform="translate(166.996 -0.125)">
+      <path id="Path_86718" data-name="Path 86718" d="M58.369,41.021A51.179,51.179,0,0,1,30.9,96.932L8.207,51.066,11.487,0A51.186,51.186,0,0,1,58.369,41.021" transform="translate(85.965 1411.125)" fill="#ffd970"/>
+      <path id="Path_86719" data-name="Path 86719" d="M28.479.834,51.169,46.7l-3.28,51.06A51.172,51.172,0,0,1,28.479.834" transform="translate(43.003 1415.492)" fill="#ffd970"/>
+      <g id="Group_184886" data-name="Group 184886" transform="translate(51.176 1419.195)" opacity="0.3" style="mix-blend-mode: multiply;isolation: isolate">
+        <g id="Group_184885" data-name="Group 184885">
+          <g id="Group_184884" data-name="Group 184884" clip-path="url(#clip-path)">
+            <path id="Path_86720" data-name="Path 86720" d="M1.311,44.292a42.994,42.994,0,1,0,43-43,42.993,42.993,0,0,0-43,43" transform="translate(-1.312 -1.295)"/>
+          </g>
+        </g>
+      </g>
+      <path id="Path_86721" data-name="Path 86721" d="M1.816,41.773a40,40,0,1,0,40-40,40,40,0,0,0-40,40" transform="translate(52.507 1420.418)" fill="#fff"/>
+    </g>
+    <g id="View-Letter" transform="translate(245 1443)">
+      <path id="Union_194" data-name="Union 194" d="M0,35.516.033,7.672A1.707,1.707,0,0,1,.511,6.488L6.281.505A1.646,1.646,0,0,1,7.464,0H25.252a1.676,1.676,0,0,1,1.659,1.691l0,20.288a7.017,7.017,0,0,0-1.837-.868V1.775H8.553V6.521A1.677,1.677,0,0,1,6.894,8.214H1.87L1.834,35.443H25.079v-.652a7.035,7.035,0,0,0,1.838-.871v1.6a1.676,1.676,0,0,1-1.659,1.691l-23.6,0A1.675,1.675,0,0,1,0,35.516ZM3.067,6.439h3.65V2.655ZM30.443,36.9l-4.064-4.14a5.724,5.724,0,0,1-3.421,1.151A5.955,5.955,0,1,1,28.8,27.951,5.982,5.982,0,0,1,27.67,31.44l4.062,4.14a.942.942,0,0,1,0,1.315.9.9,0,0,1-1.289,0Zm-11.5-8.945a4.018,4.018,0,1,0,4.017-4.095A4.06,4.06,0,0,0,18.941,27.951ZM4.54,26.637a.93.93,0,0,1,0-1.86H11.8a.93.93,0,0,1,0,1.86Zm0-5.36a.93.93,0,0,1,0-1.86h15.8a.93.93,0,0,1,0,1.86Zm0-5.023a.93.93,0,0,1,0-1.86H20.346a.93.93,0,0,1,0,1.86Z" fill="#14142b" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
