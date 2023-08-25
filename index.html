@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EKM</title>
+	<link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="assets/css/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/header.css" type="text/css"/>
+	<link rel="stylesheet" href="assets/css/local.css" type="text/css"/>
+</head>
+<body>	
+
+<!-- Header Nav Start -->
+	<nav class="navbar navbar-expand-md fixed-top ds-hd-nav desktop-navbar">
+		<div class="container-fluid">
+			<div class="ds-hd-left">
+				<a class="ds-hd-logo" href="https://www.myhcl.com" target="_blank"><img src="assets/images/hcltech.svg" alt="HCLTech"></a>
+				<a class="ds-hd-app" href="index.html">Enterprise Knowledge Management</a>
+				<a class="ds-hd-app-mobile" href="index.html">EKM</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="ds-hd-right">
+					<li class="ds-hd-notification desk-left-nav">
+						<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="hdr-notification"></i>
+							<span class="ds-hd-count"></span>
+							<span class="visually-hidden">Notifications</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end ds-hd-notify">
+							<h4 class="ds-hd-heading">Notifications (04)</h4>
+							<p class="ds-hd-nothead">Today</p>
+							<ul class="ds-hd-role">
+								<li><a href="#">Notifications will visible here - 1</a></li>
+								<li><a href="#">Notifications will visible here - 2</a></li>
+							</ul>
+							<p class="ds-hd-nothead">Older</p>
+							<ul class="ds-hd-role">
+								<li><a href="#">Notifications will visible here - 1</a></li>
+								<li><a href="#">Notifications will visible here - 2</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="desk-left-nav">
+						<button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+							<i class="hdr-feedback"></i>
+							<span class="visually-hidden">Feedback</span>
+						</button>
+					</li>
+					<li class="desk-left-nav">
+						<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="hdr-help"></i>
+							<span class="visually-hidden">Help</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end ds-hd-favorite ds-hd-help">
+							<h4 class="ds-hd-heading">Help Center</h4>
+							<ul class="ds-hd-tophelp">
+								<li><a target="_blank" href="#"><i class="hdr-userManual"></i>User Manual</a></li>
+								<li><a target="_blank" href="#"><i class="hdr-faq"></i>FAQ's</a></li>
+								<li><a target="_blank" href="#"><i class="hdr-rmDashboard"></i>Demo</a></li>
+								<li><a target="_blank" href="#"><i class="hdr-video"></i>Video Tutorial</a></li>
+							</ul>
+							<ul class="ds-hd-role ds-hd-favrole">
+								<li><a href="#"><i class="hdr-relaseNote"></i>Release Note</a></li>
+								<li><a href="#"><i class="hdr-vendorStaff"></i>Vendor Staff iTime VO</a></li>
+								<li><a href="#"><i class="hdr-rmDashboard"></i>RM Dashboard Demo</a></li>
+								<li><a href="#"><i class="hdr-telecommuting"></i>Telecommuting Philippines</a></li>
+								<li><a href="#"><i class="hdr-telecommuting"></i>Telecommuting India</a></li>
+								<li><a href="#"><i class="hdr-ppt"></i>USA - PPT</a></li>
+								<li><a href="#"><i class="hdr-vendorStaff"></i>Vendor Staff New Process</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="desk-left-nav">
+						<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="hdr-myFav"></i>
+							<span class="visually-hidden">Favorites</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end ds-hd-favorite">
+							<h4 class="ds-hd-heading">My Favourites <a href="#" class="ds-hd-favedit"><i class="hdr-edit"></i></a></h4>
+							<ul class="ds-hd-role ds-hd-favrole">
+								<li><a href="#"><i class="hdr-iTime"></i>iTime (Time Sheet Management System)</a></li>
+								<li><a href="#"><i class="hdr-lms"></i>India LMS</a></li>
+								<li><a href="#"><i class="hdr-iBridge"></i>iBridge</a></li>
+								<li><a href="#"><i class="hdr-gcs"></i>Global Claims System</a></li>
+								<li><a href="#"><i class="hdr-transportal"></i>Transportal</a></li>
+								<li><a href="#"><i class="hdr-tas"></i>My Travel (TAS)</a></li>
+								<li><a href="#"><i class="hdr-hclToday"></i>HCL Today</a></li>
+								<li><a href="#"><i class="hdr-myApproval"></i>My Approvals</a></li>
+								<li><a href="#"><i class="hdr-smartSurvey"></i>360 Degree - Smart Survey</a></li>
+								<li><a href="#"><i class="hdr-ssd"></i>Smart Service Desk (SSD)</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="">
+						<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-expanded="false" data-bs-auto-close="outside">
+							<i class="hdr-internal-nav"></i>
+							<span class="visually-hidden">Internal Nav</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end ds-hd-navmenu">
+							<ul class="ds-hd-role none-accordion-link">
+								<li><a href="#">Videos: MS Streams</a></li>
+							</ul>
+							<div class="accordion" id="accordionExample">
+								<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+										Contact
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<ul class="ds-hd-role">
+											<li><a href="#">EDNA (Expert Connect)</a></li>
+											<li><a href="#">Send email</a></li>
+										</ul>
+									</div>
+								</div>
+								</div>
+								<div class="accordion-item">
+								<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+										Links
+									</button>
+								</h2>
+								<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<ul class="ds-hd-role">
+											<li><a href="#">MyHCLTech</a></li>
+											<li><a href="#">HCLTech</a></li>
+											<li><a href="#">Ideapreneurship</a></li>
+										</ul>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					
+					<li class="ds-hd-empsec">
+						<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-expanded="false" data-bs-auto-close="outside">
+							<span class="ds-hd-sap">51678907 <span class="ds-hd-emp">Employee</span></span>
+							<span class="ds-hd-name"><img src="./assets/images/user.png" alt=""/></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-end ds-hd-empd ds-hd-navmenu">
+							<ul class="ds-hd-role ds-hd-userole">
+								<li><a href="#">My Profile</a></li>
+								<li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">My Interests</a></li>
+								<li><a href="#">My Contributions</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<nav class="navbar navbar-expand-mb ds-hd-nav dash-secondary-nav">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse1" aria-controls="navbarCollapse1" aria-expanded="false" aria-label="Toggle navigation">
+			</button>
+			<div class="collapse navbar-collapse dash-secnd-nav-panel" id="navbarCollapse1">
+				<div class="ds-hd-left">
+					<ul class="ds-hd-right ds-hd-menu">
+						<li class="ds-hd-business">
+							<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
+								Business Areas
+								<span class="visually-hidden">Business Areas</span>
+							</button>
+							<div class="dropdown-menu ds-hd-navmenu">
+								<div class="dash-int-scroll">
+									<div class="row">
+										<div class="col-md-3 col-sm-6">
+											<div class="dash-ind-inner">
+												<h5>Industries</h5>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Financial Serivces</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Banking</a></li>
+														<li><a href="#">Capital Markets</a></li>
+														<li><a href="#">Financial Risk & Compliance</a></li>
+														<li><a href="#">Insurance</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Life Sciences & Healthcare</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Healthcare</a></li>
+														<li><a href="#">Life Science</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">MEGA^LT</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Manufacturing</a></li>
+														<li><a href="#">Energy & Utilities</a></li>
+														<li><a href="#">Oil & Gas</a></li>
+														<li><a href="#">Aerospace and Defense</a></li>
+														<li><a href="#">Travel, Transport, Logistics & Hospitality</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="dash-ind-inner">
+												<h5>Services & Products</h5>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Engineering</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Overview</a></li>
+														<li><a href="#">ERS Research</a></li>
+														<li><a href="#">ERS CoE</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Digital</p>
+													<p class="dash-sub-inner-head">- Digital Business</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Digital & Analytics</a></li>
+														<li><a href="#">IoT WoRKS™</a></li>
+														<li><a href="#">SAP</a></li>
+													</ul>
+													<p class="dash-sub-inner-head">- Digital Foundation</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">CyberSecurity & GRC Services</a></li>
+														<li><a href="#">Digital Workplace Services</a></li>
+														<li><a href="#">Enterprise Studio</a></li>
+														<li><a href="#">Fluid Contact Center</a></li>
+														<li><a href="#">Hybrid Cloud Services</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-sub-inner-head">Digital Process Operations</p>
+													<p class="dash-inner-head">Product & Platforms</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Overview</a></li>
+														<li><a href="#">Actian</a></li>
+														<li><a href="#">DRYiCE™ Software</a></li>
+														<li><a href="#">HCL Software</a></li>
+														<li><a href="#">Industry Software Division</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="dash-ind-inner">
+												<h5>Ecosystem</h5>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Enterprise Technology Office (ETO)</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">About Us</a></li>
+														<li><a href="#">Academy & Start-up Ecosystem</a></li>
+														<li><a href="#">Industry Ecosystem</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Strategic Partners Ecosystem</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Amazon Web Services</a></li>
+														<li><a href="#">Cisco</a></li>
+														<li><a href="#">Dell</a></li>
+														<li><a href="#">IBM</a></li>
+														<li><a href="#">Google</a></li>
+														<li><a href="#">Intel</a></li>
+														<li><a href="#">SAP</a></li>
+														<li><a href="#">Microsoft</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="dash-ind-inner">
+												<h5>Geo</h5>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Americas - Frontier Countries</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Brazil</a></li>
+														<li><a href="#">Mexico</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">APAC/MEA - Frontier Countries</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Middle East</a></li>
+													</ul>
+												</div>
+												<div class="dash-fincheckbox">
+													<p class="dash-inner-head">Europe - Frontier Countries</p>
+													<p class="dash-sub-inner-head">- Iberia</p>
+													<ul class="ds-hd-role">
+														<li><a href="#">Portugal</a></li>
+														<li><a href="#">Spain</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="dash-above">The above given structure does not represent HCLTech Business alignment. It showcases business areas which have significant content in EKM</p>
+							</div>
+						</li>
+						<li>
+							<button data-bs-toggle="dropdown" class="btn btn-secondary" type="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside" onClick="location='key-assets.html'">
+								Key Assets
+								<span class="visually-hidden">Key Assets</span>
+							</button>
+						</li>
+					
+
+						<li>
+							<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
+								Corporate
+								<span class="visually-hidden">Corporate</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-end ds-hd-navmenu level-2">
+								<ul class="ds-hd-role">
+									<li><a href="#">Corporate Decks</a></li>
+									<li><a href="#">Sales Tools</a></li>
+									<li><a href="#">Strategy & Business Enablement</a></li>
+									<li><a href="#">Sustainability</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<button data-bs-toggle="dropdown" class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="outside">
+								Collaborate
+								<span class="visually-hidden">Collaborate</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-end ds-hd-navmenu level-3">
+								<ul class="ds-hd-role ds-hd-menu-nav border-0">
+									<li><a href="#">EKM Campaign</a></li>
+									<li><a href="#">Ekm Newsletter - 2nd Edition</a><span class="editionnew">New</span></li>
+									<li><a href="#">Rewards And Recognition</a></li>
+								</ul>
+								<hr>
+								<div class="accordion" id="accordionExample1">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="panelsStayOpen-headingOne11">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne11" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne11">
+												Social Connect
+											</button>
+										</h2>
+										<div id="panelsStayOpen-collapseOne11" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne11" data-bs-parent="#accordionExample11">
+											<div class="accordion-body">
+												<ul class="ds-hd-role">
+													<li><a href="#">Meme</a></li>
+													<li><a href="#">Yammer</a></li>
+												</ul>
+											</div>
+										</div>
+										</div>
+								</div>
+							
+							</div>
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+			<div class="navbar-collapse dash-contri-btn">
+				<a href="my-contributions.html" class="btn btn-primary btn-ripple ds-btn-primary animation-btn">Contribute Now <i class="ml-5 hdr-arrow"></i></a>
+			</div>
+		</div>
+	</nav>
+<!-- Header Nav End --->
+<main>
+	<div class="page">
+		<!-- Banner -->  
+        <div class="dash-banner">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-md-7 col-xl-6">
+						<div class="dash-conent">
+							<h1>Your own Online Knowledge Portal with <span> 12K+ Assets</span></h1>
+							<div class="dash-search">
+								<!--lookup Input Label-->
+								<div class="form-group ds-autoComplete_Emp ds-input-with-icon">
+									<div id="employee-info" class="autoComplete_Emp input-icon">
+										<input class="typeahead form-control" type="text" placeholder="Search Across HCLTech" />
+										<button class="autu_Btn">Go</button>
+										<i class="i-icon icon-outline-search"></i>
+									</div>
+								</div> 
+								<!--lookup Input Label-->
+							</div>
+							<div class="dash-trandingsec">
+								<p>Discover More:</p>
+								<ul class="dash-discover-ul">
+									<li><a href="#">Actian</a></li>
+									<li><a href="#">Academia &amp; Start-Up Ecosystem</a></li>
+									<li><a href="#">Aerospace And Defense</a></li>
+									<li><a href="#">Brazil</a></li>
+									<li><a href="#">Capital Markets</a></li>
+									<li><a href="#">Cisco</a></li>
+									<li><a href="#">Corporate Decks</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4 col-xl-4">
+						<div class="dash-img">
+							<img src="./assets/images/bannerimg.png" alt=""/>
+						</div>
+					</div>
+				</div>
+			</div>            
+        </div>
+		<div class="container">
+		<!-- You are Ranked  -->
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-center mb-md-0 mb-sm-0 mb-xs-0">
+				<div class="dash-ekmsec col-md-10 col-sm-12 col-xs-12">
+					<div class="dash-ekmaward">
+						<img src="./assets/images/ekmaward.png" alt=""/>
+						<div class="dash-ekmranked">
+							<p class=dash-rank>You are Ranked #15 in EKM</p>
+							<p class="dash-contri">based on your contributions and usage</p>
+						</div>
+					</div>
+					<div class="dash-ekmbtn">
+						<a href="my-contributions.html" class="btn btn-outline btn-ripple">View My Contributions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- You are Ranked  -->
+		<!-- Trending Now -->
+			<h3 class="dash-heading">Trending Now</h3>
+			<div class="row">
+				<div class="col-xl-3 col-md-6">
+					<div class="cardType-1 dash-cardtype">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="card-content">
+							<h3 class="card-link ">Improved customer satisfaction through Rapid Home Loan Disbursement</h3>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 d-flex">
+					<div class="cardType-1 dash-cardtype">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="card-content">
+							<h3 class="card-link ">Gain more from Digital Transformation with DRYiCE AEX</h3>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 d-flex">
+					<div class="cardType-1 dash-cardtype">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="card-content">
+							<h3 class="card-link ">A discussion on Agile in Banking: Beyond Buzzword</h3>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6 d-flex">
+					<div class="cardType-1 dash-cardtype">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="card-content">
+							<h3 class="card-link ">2021 banking and capital markets outlook</h3>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Recommended for You -->
+			<h3 class="dash-heading">Recommended for You</span></h3>
+			<div class="recom-slider">
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r1.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>A discussion on Agile in Banking: Beyond Buzzword</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r2.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Video</span> | July 7, 2022</label>
+							<p>Gain more from Digital Transformation with DRYi…</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r3.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>2021 banking and capital markets outlook</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r4.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>2021 banking and capital markets outlook</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r1.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>A discussion on Agile in Banking: Beyond Buzzword</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r2.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Video</span> | July 7, 2022</label>
+							<p>Gain more from Digital Transformation with DRYi…</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r3.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>2021 banking and capital markets outlook</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dash-rec">
+						<div class="dash-recimg">
+							<img src="./assets/images/r4.png" alt="">
+						</div>
+						<div class="dash-castext">
+							<label><span class="text-blue">Case Study</span> | July 7, 2022</label>
+							<p>2021 banking and capital markets outlook</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Continue Exploring -->
+			<h3 class="dash-heading">Continue Exploring</h3>
+			<div class="row dash-explore">
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+					<div class="dash-castudy">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="dash-conimg"><img src="./assets/images/case1.png" alt=""></div>
+						<div class="dash-castext">
+							<label class="text-blue">PDF</label>
+							<p>Gain more from Digital</p>
+							<p>Transformation with DRYiCE AEX</p>
+							<div class="arrow-btn"><span>View More</span></div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+					<div class="dash-castudy">
+						<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+						<div class="dash-conimg"><img src="./assets/images/case2.png" alt=""></div>
+						<div class="dash-castext">
+							<label class="text-blue">PPT</label>
+							<p>A discussion on Agile in</p>
+							<p>Banking: Beyond Buzzword</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+					<div class="dash-castudy">
+						<div class="dash-conimg"><img src="./assets/images/case3.png" alt=""></div>
+						<div class="dash-castext">
+							<a aria-label="Cloud Learn More" class="link-box text-hide" href="#">Learn More &nbsp;</a>
+							<label class="text-blue">PDF</label>
+							<p>How insurance can help</p>
+							<p>combat climate change</p>
+							<div class="arrow-btn"><span>View More</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Wall of Fame -->
+		<div class="dash-reward-bg">
+			<div class="container">
+				<div class="dash-reward-inner">
+					<div class="dash-reward-tab">
+						<h3 class="dash-heading d-flex align-items-center">Wall of Fame</h3>
+						<div id="tile-1" class="tabslider">
+							<ul class="nav nav-tabs primary-tab" id="primary-tabs" role="tablist">
+							  <li class="nav-item" role="presentation">
+								<button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#tab1-pane" type="button" role="tab" aria-controls="tab1-pane" aria-selected="true">Ace</button>
+							  </li>
+							  <li class="nav-item" role="presentation">
+								<button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#tab2-pane" type="button" role="tab" aria-controls="tab2-pane" aria-selected="false">Applause</button>
+							  </li>
+							  <li class="nav-item" role="presentation">
+								<button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#tab3-pane" type="button" role="tab" aria-controls="tab3-pane" aria-selected="false">K-Star Award</button>
+							  </li>
+							  <li class="nav-item" role="presentation">
+								<button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#tab4-pane" type="button" role="tab" aria-controls="tab4-pane" aria-selected="false">Titan Award</button>
+							  </li>
+							  <li class="nav-item" role="presentation">
+								<button class="nav-link" id="tab5" data-bs-toggle="tab" data-bs-target="#tab5-pane" type="button" role="tab" aria-controls="tab5-pane" aria-selected="false">Galaxy Award</button>
+							  </li>
+							  <li class="slider slider2" role="presentation"></li>
+							</ul>
+						</div>
+						<div class="tab-content" id="primary-tabsContent">
+							<div class="tab-pane fade show active" id="tab1-pane" role="tabpanel" aria-labelledby="tab1" tabindex="0">
+								<p class="dash-awarded">Awarded to the employees who have been instrumental in leveraging the knowledge assets and downloading documents.</p>
+								<div class="row mr-to-R">
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u1.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Sonal Beri</p>
+												<p class="dash-recontri">Contribution in ScalTech - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u2.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Uttara Joshi Chopra</p>
+												<p class="dash-recontri">Contribution in ERS - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u3.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Aditi R Ganesh</p>
+												<p class="dash-recontri">Contribution in LSH - India</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="dash-awared-viewall lineEffect2" href="#">View All</a>
+							</div>
+							<div class="tab-pane fade" id="tab2-pane" role="tabpanel" aria-labelledby="tab2" tabindex="0">
+								<p class="dash-awarded">Awarded to the employees who have been instrumental in leveraging the knowledge assets and downloading documents.</p>
+								<div class="row">
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u1.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Sonal Beri</p>
+												<p class="dash-recontri">Contribution in ScalTech - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u2.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Uttara Joshi Chopra</p>
+												<p class="dash-recontri">Contribution in ERS - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u3.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Aditi R Ganesh</p>
+												<p class="dash-recontri">Contribution in LSH - India</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="dash-awared-viewall lineEffect2" href="#">View All</a>
+							</div>
+							<div class="tab-pane fade" id="tab3-pane" role="tabpanel" aria-labelledby="tab3" tabindex="0">
+								<p class="dash-awarded">Awarded to the employees who have been instrumental in leveraging the knowledge assets and downloading documents.</p>
+								<div class="row">
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u1.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Sonal Beri</p>
+												<p class="dash-recontri">Contribution in ScalTech - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u2.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Uttara Joshi Chopra</p>
+												<p class="dash-recontri">Contribution in ERS - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u3.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Aditi R Ganesh</p>
+												<p class="dash-recontri">Contribution in LSH - India</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="dash-awared-viewall lineEffect2" href="#">View All</a>
+							</div>
+							<div class="tab-pane fade" id="tab4-pane" role="tabpanel" aria-labelledby="tab4" tabindex="0">
+								<p class="dash-awarded">Awarded to the employees who have been instrumental in leveraging the knowledge assets and downloading documents.</p>
+								<div class="row">
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u1.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Sonal Beri</p>
+												<p class="dash-recontri">Contribution in ScalTech - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4 col-xl-4">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u2.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Uttara Joshi Chopra</p>
+												<p class="dash-recontri">Contribution in ERS - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="mt-48 mt-xs-5 mt-sm-5">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u3.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Aditi R Ganesh</p>
+												<p class="dash-recontri">Contribution in LSH - India</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="dash-awared-viewall lineEffect2" href="#">View All</a>
+							</div>
+							<div class="tab-pane fade" id="tab5-pane" role="tabpanel" aria-labelledby="tab5" tabindex="0">
+								<p class="dash-awarded">Awarded to the employees who have been instrumental in leveraging the knowledge assets and downloading documents.</p>
+								<div class="row">
+									<div class="mt-48 mt-xs-5 mt-sm-5">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u1.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Sonal Beri</p>
+												<p class="dash-recontri">Contribution in ScalTech - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="mt-48 mt-xs-5 mt-sm-5">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u2.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Uttara Joshi Chopra</p>
+												<p class="dash-recontri">Contribution in ERS - India</p>
+											</div>
+										</div>
+									</div>
+									<div class="mt-48 mt-xs-5 mt-sm-5">
+										<div class="dash-castudy">
+											<div class="dash-conimg"><img src="./assets/images/u3.png" alt=""></div>
+											<div class="dash-castext">
+												<p class="dash-rename">Aditi R Ganesh</p>
+												<p class="dash-recontri">Contribution in LSH - India</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a class="dash-awared-viewall lineEffect2" href="#">View All</a>
+							</div>
+						</div>
+					</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-12 col-md-12">
+						<div class="dash-rew-rec-award">
+							<img src="./assets/images/ekmaward.png" alt="">
+							<p>You can be a Contributor too</p>
+							<div class="dash-rew-works">
+								<a class="lineEffect2" href="#">How it Works?</a>
+								<button type="button" class="btn btn-outline btn-ripple">Contribute Now!</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</main>
+<!-- Yammer -->
+<div class="container">
+	<div class="joinUsWarp">
+		<div class="joinUs">Contact EKM -  <a class="btn btn-link btn-ripple ds-btn-link lineEffect2 roobertS text-purpel" href="mailto:emailaddress@whatever.com"> enterpriseKM@hcl.com</a> </div>
+		<div class="yammer-feed"> <img class="mr-12" src="assets/images/yammer-feed.svg" alt=""> <a class="btn btn-link btn-ripple lineEffect2" href="javascript:void(0)">Go to Yammer feed</a></div>
+	</div>
+</div>
+		
+<!-- Footer Start -->
+<footer class="ds-ft-footer">
+	<p class="ds-ft-webspecify">Best viewed on the latest versions of MS Edge, Chrome or Safari.</p>
+	<img src="assets/images/hcl.svg"alt="hcl">
+</footer>
+<!-- Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog largeModal">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  	<h5 class="modal-title f-24 roobertB" id="feedbackModalLabel">Share your views</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true" class="icon-close"></span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<p class="mb-14">Please rate your experience</p>
+			<div class="rating-stars">
+				<ul id="stars">
+					<li class="star" data-value="1"><i class="hdr-Star"></i></li>
+					<li class="star" data-value="2"><i class="hdr-Star"></i></li>
+					<li class="star" data-value="3"><i class="hdr-Star"></i></li>
+					<li class="star" data-value="4"><i class="hdr-Star"></i></li>
+					<li class="star" data-value="5"><i class="hdr-Star"></i></li>
+				</ul>
+				<div id="star-color" class="message"><span></span></div>
+			</div>
+			<form method="POST">
+				<div class="form-group mb-16">
+					<label class="f-16 mb-14">Write a Review</label>
+					<textarea class="form-control feedRemark" rows="5" placeholder="Enter here"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="f-16 mb-14">Provide your suggestions below</label>
+					<textarea class="form-control feedRemark" rows="5" placeholder="Enter here"></textarea>
+				</div>
+				<div class="glb-btn mt-4 text-center">
+					<button id="resetButton" type="reset" class="btn btn-secondary-outline btn-ripple ds-btn-secondary-outline ds-btn-small me-3 f-16 roobertS resetBtn"> Reset</button>
+					<button type="submit" class="btn btn-primary btn-ripple ds-btn-primary ds-btn-small f-16 roobertS" id="submitFeed" data-bs-toggle="modal" data-bs-target="#successModal">Submit</button>
+				</div>
+			</form>
+			
+		</div>
+	  </div>
+	</div>
+</div>
+<!-- Logout Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog largeModal">
+	  <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true" class="icon-close"></span>
+			</button>
+		</div>
+		<div class="modal-body text-center">
+			<img src="assets/images/alert.png" alt="alert" />
+			<p class="mt-3">Are you sure you want to logout?</p>
+			<div class="glb-btn mt-4 text-center">
+				<button onclick="location.href='common/logout.html'" type="button" class="btn btn-primary ds-btn-primary">Yes</button>
+				<button type="button" class="btn btn-primary ds-btn-primary" data-bs-dismiss="modal" aria-label="Close">No</button>
+			</div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- This will Customise your New EKM Feed modal-xl -->
+<div class="modal ds-modal fade dash-mdl-int" id="exampleModal2">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">What are you Interested in?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+			<div class="dash-intdiv">
+				<h6>Select your interest area to customize and view document recommendations from EKM repositories</h6>
+				<div class="dash-int-scroll">
+					<ul class="dash-int-flex">
+						<li>
+							<div class="dash-ind-inner">
+								<h5>Industries</h5>
+								<div class="dash-fincheckbox">
+									<p class="dash-inner-head">Financial Serivces</p>
+									<div class="form-group ds-checkbox withLable">
+										<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Banking</span></label>
+										<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Capital Markets</span></label>
+										<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Financial Risk & Compliance</span></label>
+										<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Insurance</span></label>
+									</div>
+								</div>
+								<div class="dash-fincheckbox">
+									<p class="dash-inner-head">Life Sciences & Healthcare</p>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Life Sciences & Healthcare</span></label>
+								</div>
+								<div class="dash-fincheckbox">
+									<p class="dash-inner-head">MEGA^LT</p>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Manufacturing</span></label>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Energy & Utilities</span></label>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Oil & Gas</span></label>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Aerospace and Defense</span></label>
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6 lineheight-20">Travel, Transport, Logistics & Hospitality</span></label>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="dash-ind-inner mb-14">
+								<h5>Services & Products</h5>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="dash-fincheckbox">
+											<p class="dash-inner-head">Engineering</p>
+											<div class="form-group ds-checkbox withLable">
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">ERS Marketing & Presales</span></label>
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">ERS Research</span></label>
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">ERS CoE</span></label>
+											</div>
+										</div>
+										<div class="dash-fincheckbox">
+											<p class="dash-inner-head">Digital Business</p>
+											<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Digital & Analytics</span></label>
+											<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">SAP</span></label>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="dash-fincheckbox">
+											<p class="dash-inner-head">Digital Foundation</p>
+											<div class="form-group ds-checkbox withLable">
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span> <span class="label-ml-6">CyberSecurity & GRC Services</span> </label>
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">DWP ScalTech</span></label>
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Enterprise Studio</span></label>
+												<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Fluid Contact Center</span></label>
+											</div>
+										</div>
+										<div class="dash-fincheckbox">
+											<p class="dash-inner-head">Digital Process Operations</p>
+											<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">DPO</span></label>
+										</div>
+										<div class="dash-fincheckbox">
+											<p class="dash-inner-head">Products & Platforms</p>
+											<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">DRYiCE™ Software</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="dash-ind-inner mb-14">
+								<h5>Ecosystem</h5>
+								<div class="dash-fincheckbox">
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Enterprise Technology Office (ETO)</span></label>
+								</div>
+							</div>
+							<div class="dash-ind-inner">
+								<h5>Corporate</h5>
+								<div class="dash-fincheckbox">
+									<label class="checkbox-label"> <input type="checkbox"> <span class="checkbox-custom"></span><span class="label-ml-6">Strategic Research</span></label>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+        </div>
+		<div class="modal-footer border-0">
+			<div class="d-flex">
+			   <a href="#" data-bs-dismiss="modal" class="btn btn-ripple dash-skip-btn me-3">Skip for Now</a>
+			   <a href="#" data-bs-dismiss="modal"  class="btn btn-primary btn-ripple ds-btn-primary ds-btn-small">Continue <span class="number">(00)</span></a>
+			 </div>
+		   </div>
+      </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+<script src="assets/js/daterangepicker.js"></script>
+<script src="assets/js/custom-datepicker.js"></script>
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/dataTables.fixedColumns.min.js"></script>
+<script src="assets/js/custom-datatable.js"></script>
+<script src="assets/js/typeahead.bundle.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/slick.min.js"></script>
+<script src="assets/js/header.js"></script>
+<script src="assets/js/ds-global.js"></script>
+<script src="assets/js/local.js"></script>
+
+<script>
+	$(document).ready(function(){
+		// $(".dropdown").on("show.bs.dropdown", function (e) {
+		// 	// debugger
+        // 	$(this).find(".dropdown-menu").first().stop(true, true).slideDown();
+		// });
+		// $(".dropdown1").on("hide.bs.dropdown", function (e) {
+		// 	$(this).find(".dropdown-menu1").first().stop(true, true).slideUp();
+		// });
+		
+	})
+	
+
+// count increase and decrease when click on checkbox
+	var increment2=0; 
+	$('.checkbox-label input').on('click', function() { 
+		if (this.checked) {
+			increment2++;                 
+		} else {
+			increment2--;
+		}
+		$('.number').html( '(0' + increment2 + ')');             
+    })
+// Modal
+	 window.onload = () => {
+        $('#exampleModal2').modal('show');
+    }
+// table show hide
+	var tableData = document.getElementById('serchTable');
+	var add = document.getElementById('add');
+	var addMore = document.getElementById('addMore');
+
+	$(tableData).css('display', 'none');
+	$(addMore).css('display', 'none');
+	function searchForm(){
+		$(tableData).css('display', 'block');
+		$(addMore).css('display', 'block');
+		$(add).css('display', 'none');
+	}
+
+
+
+	$(document).ready(function(){
+		$('.recom-slider').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			infinite: false,
+			responsive: [
+				{
+					breakpoint: 1199,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+				{ 
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						autoplay: true,
+			            autoplaySpeed: 2000,
+						arrows: false,
+					}
+				},
+			]
+		});
+
+				
+		$("#tile-1 .nav-tabs button").click(function() {
+			var position = $(this).parent().position();
+			var width = $(this).parent().width();
+			$("#tile-1 .slider").css({"left":+ position.left,"width":width});
+		});
+		var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width();
+			var actPosition = $("#tile-1 .nav-tabs .active").position();
+			$("#tile-1 .slider").css({"left":+ actPosition.left,"width": actWidth});
+
+
+
+
+
+			$('.dropdown').on('show.bs.dropdown', function(e){
+			$(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+			});
+
+			$('.dropdown').on('hide.bs.dropdown', function(e){
+			$(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+			});
+
+
+
+		});
+</script>
+</body>
+</html>
