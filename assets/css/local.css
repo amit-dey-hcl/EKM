@@ -822,7 +822,7 @@ hr {
 /* Secondary Nav */
 .ds-hd-menu .ds-hd-business{position: static;}
 .ds-hd-nav .ds-hd-business .dropdown-menu{max-width:1200px;min-width:1200px;}
-.dash-secondary-nav{top: 56px;min-height: inherit;position: sticky;background:#fff;z-index: 1;padding:0 20px;z-index:999;}
+.dash-secondary-nav{top: 56px;min-height: inherit;position: sticky;background:#fff !important;z-index: 1;padding:0 20px;z-index:999;}
 .dash-secnd-nav-panel{flex-grow: inherit;z-index: 99;}
 .dash-secondary-nav .dash-ind-inner{background-color: inherit;padding:0;border-radius:0;}
 .dash-secondary-nav .ds-hd-menu>li{margin-right:22px;}
