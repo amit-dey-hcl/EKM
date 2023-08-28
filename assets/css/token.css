@@ -1,6 +1,6 @@
 @import "../../build/css/variables.css"; /* Using a string */
 
-.ds-hd-nav,  .ds-ft-footer  {
+.ds-hd-nav,  .ds-ft-footer, .dash-reward-bg  {
     background: var(--sd-main-gradient);
 }
 .dash-rec, .dash-castudy{
@@ -9,18 +9,26 @@
 .dash-recimg, .dash-explore .dash-conimg > img{
     border-radius: 0;
 }
-.ds-btn-primary, .btn-outline, .dash-cardtype, .dash-rec, .dash-castudy, .dash-rew-rec-award{
+.ds-btn-primary, .btn-outline, .dash-cardtype, .dash-rec, .dash-ekmsec, .dash-castudy, .dash-rew-rec-award{
     border-radius: var(--sd-ds-box-radius-small);
 }
-
-.ds-autoComplete_Emp .autu_Btn{
-    border-radius: 0 var(--sd-ds-box-radius-small) var(--sd-ds-box-radius-small) 0;
+.dash-discover-ul>li>a{
+    border-radius: var(--sd-ds-radius-lg);
 }
+/* .ds-autoComplete_Emp .autu_Btn{
+    border-radius: 0 var(--sd-ds-box-radius-small) var(--sd-ds-box-radius-small) 0;
+} */
 .dash-rew-rec-award, .ds-btn-primary{
     background-color: var(--sd-ds-purple-primary) !important;
 }
-.dash-cardtype.cardType-1:hover .card-link, .arrow-btn{
+.dash-cardtype.cardType-1:hover .card-link, .btn-outline, .arrow-btn, .dash-rew-works .btn-outline{
     color: var(--sd-ds-purple-primary); 
+}
+.btn-outline{
+    border-color: var(--sd-ds-purple-primary);
+}
+.btn-outline:hover, .dash-rew-works .btn-outline:hover{
+    color: #fff; 
 }
 /* #feedbackModal .modal-title, .rating-stars ul > li.star.selected > i, .ds-hd-role>li>a:hover, .ds-hd-role>li.active a, .ds-hd-role>li>a:hover>i, .ds-hd-role>li.active a>i, .ds-hd-role>li>a:focus, .ds-hd-role>li>a:focus>i, .ds-hd-logout:hover, .ds-hd-logout:focus{
     color: var(--sd-ds-purple-primary);
