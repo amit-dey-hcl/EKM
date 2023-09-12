@@ -68,7 +68,7 @@
     "type": "borderRadius"
   },
   "DS-Box-radius-Small": {
-    "value": "5px",
+    "value": "20px",
     "type": "borderRadius"
   },
   "DS-Icon-border-color": {
